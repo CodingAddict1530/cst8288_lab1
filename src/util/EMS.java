@@ -1,16 +1,21 @@
 package util;
 
 import employee.Employee;
-import employee.FullTimeEmployee;
 import factory.EmployeeFactory;
 import manager.EmployeeManager;
 
 /**
- *
+ * Simulates the process of creating employees.
+ * 
  * @author hp
  */
 public class EMS {
     
+    /**
+     * The point of execution of the program.
+     * 
+     * @param args Arguments from command line.
+     */
     public static void main(String[] args) {
         
         for (String emp: new String[] {"0,Alexis,IDK,Servant,34,3000", "1,George,IDK,Janitor,44,1000"}) {
@@ -27,8 +32,11 @@ public class EMS {
         
         for (Employee e: EmployeeManager.getInstance().retrieveEmployees()) {
             
-            System.out.println("Name: " + e.getName() + "\nType: " + ((e instanceof FullTimeEmployee) ? 
-                    "Full time" : "Part time") + "\n\n");
+            e.clockIn();
+            e.clockOut();
+            e.trackWorkHours();
+            System.out.println("\n\n");
+           
         }
         
     }
