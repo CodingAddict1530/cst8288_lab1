@@ -1,22 +1,32 @@
 package builder;
 
-
 import employee.Employee;
 import employee.PartTimeEmployee;
 
 /**
- *
- * @author hp
+ * Builds a PartTimeEmployee object.
  */
 public class PartTimeEmployeeBuilder implements EmployeeBuilder {
     
+    /**
+     * The Employee.
+     */
     private final Employee employee;
     
+    /**
+     * Instantiates a new PartTimeEmployeeBuilder object.
+     */
     public PartTimeEmployeeBuilder() {
         
         this.employee = new PartTimeEmployee();
     }
 
+    /**
+     * Updates the id of the Employee.
+     * 
+     * @param id The new id.
+     * @return The EmployeeBuilder.
+     */
     @Override
     public EmployeeBuilder setID(int id) {
         
@@ -24,6 +34,12 @@ public class PartTimeEmployeeBuilder implements EmployeeBuilder {
         return this;
     }
 
+    /**
+     * Updates the name of the Employee.
+     * 
+     * @param name The new name.
+     * @return The EmployeeBuilder.
+     */
     @Override
     public EmployeeBuilder setName(String name) {
         
@@ -31,6 +47,12 @@ public class PartTimeEmployeeBuilder implements EmployeeBuilder {
         return this;
     }
 
+    /**
+     * Updates the department of the Employee.
+     * 
+     * @param department The new department.
+     * @return The EmployeeBuilder.
+     */
     @Override
     public EmployeeBuilder setDepartment(String department) {
         
@@ -38,6 +60,12 @@ public class PartTimeEmployeeBuilder implements EmployeeBuilder {
         return this;
     }
 
+    /**
+     * Updates the role of the Employee.
+     * 
+     * @param role The new role.
+     * @return The EmployeeBuilder.
+     */
     @Override
     public EmployeeBuilder setRole(String role) {
         
@@ -45,6 +73,12 @@ public class PartTimeEmployeeBuilder implements EmployeeBuilder {
         return this;
     }
 
+    /**
+     * Updates the working hours per week of the Employee.
+     * 
+     * @param workingHoursPerWeek The new workingHoursPerWeel.
+     * @return The EmployeeBuilder.
+     */
     @Override
     public EmployeeBuilder setWrkingHoursPerWeek(double workingHoursPerWeek) {
         
@@ -52,6 +86,12 @@ public class PartTimeEmployeeBuilder implements EmployeeBuilder {
         return this;
     }
 
+    /**
+     * Updates the salary of the Employee.
+     * 
+     * @param salary The new salary.
+     * @return The EmployeeBuilder.
+     */
     @Override
     public EmployeeBuilder setSalary(double salary) {
         
@@ -59,6 +99,11 @@ public class PartTimeEmployeeBuilder implements EmployeeBuilder {
         return this;
     }
     
+    /**
+     * Returns the Employee object.
+     * 
+     * @return The Employee.
+     */
     @Override
     public Employee getEmployee() {
         

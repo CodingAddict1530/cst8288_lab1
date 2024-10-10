@@ -1,8 +1,7 @@
 package util;
 
 /**
- *
- * @author hp
+ * Determines the types of employees available.
  */
 public enum EmployeeType {
     

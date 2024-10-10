@@ -6,8 +6,6 @@ import manager.EmployeeManager;
 
 /**
  * Simulates the process of creating employees.
- * 
- * @author hp
  */
 public class EMS {
     
